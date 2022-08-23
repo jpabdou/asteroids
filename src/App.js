@@ -107,6 +107,8 @@ function handleKeyPress(e) {
   }
     else if (e.key === " ") {
       shootBullet()
+    } else if (e.key === "r") {
+      start()
     }
 }
 

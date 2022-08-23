@@ -185,6 +185,7 @@ export function tick() {
     moveObjects()
     collisionDetection()
     bulletTime()
+    asteroidReplacer()
 }
 
 

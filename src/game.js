@@ -7,7 +7,7 @@ let state = {
     score: 0,
     lives: 3,
     gameOver: false,
-    count: 5,
+    count: 3,
     level: 1
 }
 

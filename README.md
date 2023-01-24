@@ -11,13 +11,14 @@ An asteroids game app made with React, react-konva, and JavaScript deployed thro
 
 You start with your ship with 3 lives at the center of the screen oriented downward with 3 asteroids (at Level 1) in the space around you. Controls are with the following keys, which can be pressed once or held down for inputs:
 
-<ul> Fire a bullet with the Spacebar key. You can only have 3 bullets on-screen at a time.
+<ul> 
+<li>Fire a bullet with the Spacebar key. You can only have 3 bullets on-screen at a time.
 <li> Rotate counterclockwise with the Left Arrow key.
 <li> Rotate clockwise with the Right Arrow key.
 <li> Accelerate with the Up Arrow key.
 <li> Deccelerate with the Down Arrow key.
 <li> Restart the game with the Enter key.
-
+</ul>
 ---
 
 <h2>Things to keep in mind</h2>

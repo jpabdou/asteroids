@@ -16,7 +16,7 @@ You start with your ship with 3 lives at the center of the screen oriented downw
 <li> Rotate counterclockwise with the Left Arrow key.
 <li> Rotate clockwise with the Right Arrow key.
 <li> Accelerate with the Up Arrow key.
-<li> Deccelerate with the Down Arrow key.
+<li> Decelerate with the Down Arrow key.
 <li> Restart the game with the Enter key.
 </ul>
 

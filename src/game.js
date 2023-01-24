@@ -1,4 +1,4 @@
-let state = {
+let initState = {
     asteroids: [],
     ship : {},
     bullets: [],
@@ -10,6 +10,7 @@ let state = {
     count: 3,
     level: 1
 }
+let state = {...initState}
 
 function distance(obj1, obj2) {
     const x = obj1.x - obj2.x
@@ -193,6 +194,8 @@ export function tick() {
 
 
 export function start() {
+    state = {...initState};
+
     state.ship = {
      y: state.height/2, 
      x: state.width/2,

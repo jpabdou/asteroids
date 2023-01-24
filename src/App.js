@@ -51,6 +51,7 @@ const Level = (props) => {
     x={500}
     y={520}
     text={"Level: " + props.level}
+    align={"center"}
     fontSize={16}
     fontFamily= {'Calibri'}
     fill= {'white'}
@@ -81,12 +82,12 @@ const Score = (props) => {
 };
 
 const GameOver = (props) => {
-  const state = props.state
   return <Text
-      x= {200}
+      x= {75}
       y= {300}
-      text= {'GAME OVER'}
+      text= {'GAME OVER! Press Enter to restart.'}
       fontSize= {30}
+      align={"center"}
       fontFamily= {'Calibri'}
       fill= {'red'}
       />
@@ -111,17 +112,6 @@ function handleKeyPress(e) {
   else if (e.key === "Enter") {
       start()
     }
-}
-
-const AsteroidHalf = (props) => {
-  const state = props.state
-  return <Circle
-        x={state.x}
-        y={state.y}
-        radius={12}
-        fill={"tan"}
-        shadowBlur={5}
-  />
 }
 
 const App = () => {

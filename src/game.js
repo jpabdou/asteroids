@@ -8,7 +8,8 @@ let initState = {
     lives: 3,
     gameOver: false,
     count: 3,
-    level: 1
+    level: 1,
+    explosion: false
 }
 let state = {...initState}
 
@@ -95,6 +96,9 @@ function levelUp(){
         state.count += 1
         state.level += 1
     }
+    if (state.level & 3 === 0) {
+        state.lives +=1
+    }
 }
 
 function asteroidReplacer() {
@@ -136,6 +140,7 @@ function collisionDetection(){
     state.asteroids.forEach((asteroid, asteroidIdx) => {
         if (state.ship.radius + asteroid.radius > distance(state.ship,asteroid)) {
             state.lives -= 1
+            state.explosion = true
             state.asteroids.splice(asteroidIdx, 1)
             asteroidReplacer()
             if (state.lives === 0) {
@@ -183,6 +188,9 @@ export function tick() {
     if (state.gameOver) {
         return
     }
+    if (state.explosion) {
+        state.explosion = false
+    }
     moveObjects()
     collisionDetection()
     bulletTime()
@@ -195,6 +203,8 @@ export function tick() {
 
 export function start() {
     state = {...initState};
+    state.asteroids = [] // forces state to reinitialize with new asteroids
+    state.bullets = [] // forces state to reinitialize with no bullets
 
     state.ship = {
      y: state.height/2, 

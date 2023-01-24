@@ -25,6 +25,18 @@ const Ship = (props) => {
   />
 }
 
+const Explosion = (props) => {
+  const state = props.state
+  return <Circle
+        y={state.y}
+        x={state.x}
+        radius={state.radius}
+        fill= {'orange'}
+        shadowBlur={5}
+  />
+}
+
+
 const Bullet = (props) => {
   const state = props.state
   return <Circle
@@ -132,6 +144,7 @@ const App = () => {
         <Layer>
         <Rect width={600} height={600} fill="black" />
           <Ship state= {state.ship}/>
+          {state.explosion && <Explosion state = {state.ship}/>}
           {state.asteroids.map((asteroidState, idx) => <Asteroid key={idx} state = {asteroidState}/>)}
           {state.bullets.map((bulletState, idx) => <Bullet key={idx} state = {bulletState}/>)}
           {state.gameOver && <GameOver/>}

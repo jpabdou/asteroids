@@ -19,6 +19,7 @@ You start with your ship with 3 lives at the center of the screen oriented downw
 <li> Deccelerate with the Down Arrow key.
 <li> Restart the game with the Enter key.
 </ul>
+
 ---
 
 <h2>Things to keep in mind</h2>

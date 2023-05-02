@@ -140,6 +140,7 @@ const App = () => {
   }, []);
   if (state === null) {return null}
     return (
+      <div>
       <Stage width={state.width} height={state.height}>
         <Layer>
         <Rect width={600} height={600} fill="black" />
@@ -153,6 +154,16 @@ const App = () => {
           <Score score= {state.score}/>
         </Layer>
       </Stage>
+      <ul> 
+      <li>Fire a bullet with the Spacebar key. You can only have 3 bullets on-screen at a time.</li>
+      <li>Rotate counterclockwise with the Left Arrow key.</li>
+      <li>Rotate clockwise with the Right Arrow key.</li>
+      <li>Accelerate with the Up Arrow key.</li>
+      <li>Deccelerate with the Down Arrow key.</li>
+      <li>Restart the game with the Enter key.</li>
+      </ul>
+      </div>
+
     );
   
 }
